@@ -12,6 +12,15 @@ code {
     monospace;
 }
 
-.Counter {
+.nav-bar-button {
+  height: 100%;
   width: 100%;
+}
+
+.nav-bar-button:hover,
+.nav-bar-button:hover * {
+  height: 100%;
+  color: #000;
+  background-color: #fff;
+  border-color: #000;
 }
