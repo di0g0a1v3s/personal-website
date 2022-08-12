@@ -11,7 +11,7 @@ class NavBarButton extends Component{
     render() { 
         return ( 
         
-            <a href="#" className="nav-link text-white">
+            <a href="/" className="nav-link text-white">
               <div>
                 {this.props.menu.icon} {this.props.menu.name}
               </div>
