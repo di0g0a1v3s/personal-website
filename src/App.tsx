@@ -1,10 +1,5 @@
-// @ts-ignore
-import logo from './logo.svg';
 import './App.css';
-// @ts-ignore
 import NavBar from './components/navbar.tsx';
-// @ts-ignore
-import Counters from './components/counters.tsx';
 import React from 'react';
 
 class App extends React.Component {
@@ -14,34 +9,27 @@ class App extends React.Component {
 
     this.state = 
     {
-      counters : [{id:1, value:7}, {id:2, value:0}, {id:3, value:2}]
+      title : 'Diogo Alves',
+      menus : [
+        {id:1, name:'About', href:"", icon: <i className="bi bi-person-lines-fill"></i> }, 
+        {id:2, name:'Experience', href:"", icon: <i className="bi bi-briefcase"></i>}, 
+        {id:3, name:'Projects', href:"", icon: <i className="bi bi-code-slash"></i> }, 
+        {id:4, name:'Contacts', href:"", icon: <i className="bi bi-envelope"></i>}],
+
+      socialMedia: [
+        {id:1, name:'Github', href:"", icon:""},
+      ]
     }
   }
 
   render() {
       return (
       <React.Fragment>
-        <NavBar counters = {this.state.counters}/>
-        <main className='container'>
-          <Counters counters = {this.state.counters} onReset={this.handleReset} onIncrement={this.handleIncrement} onDelete={this.handleDelete}/>
-        </main>
+        <NavBar menus = {this.state.menus} title = {this.state.title}/>
       </React.Fragment>
     );
   }
 
-  handleDelete = (counterId) => {
-    this.setState({counters : this.state.counters.filter(counter => counter.id !== counterId)});
-  };
-
-  handleIncrement = (counter) => {
-    const ctrs = this.state.counters.map(c => c.id === counter.id ? {id:c.id, value:c.value+1} : c  );
-    this.setState({counters : ctrs});
-  };
-
-  handleReset = () => {
-    const ctrs = this.state.counters.map(c => {return {id:c.id, value:0}});
-    this.setState({counters : ctrs});
-  };
 }
 
 export default App;
