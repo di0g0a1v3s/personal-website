@@ -13,7 +13,7 @@ class Footer extends Component {
 
     </ul>
     <div className="col-2 col-md-4 d-flex justify-content-end">
-    <a type="button" class="btn btn-outline-dark me-2" href="assets/Resume.pdf" download="Resume.pdf"><i className="bi bi-paperclip me-2"></i>Download CV</a>
+    <a type="button" class="shadow btn btn-outline-dark me-2" href="assets/Resume.pdf" download="Resume.pdf"><i className="bi bi-paperclip me-2"></i>Download CV</a>
     </div>
     </div>
 

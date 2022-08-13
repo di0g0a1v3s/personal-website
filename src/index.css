@@ -1,9 +1,8 @@
 body {
   padding-top: 85px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Consolas, Inter, sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -53,4 +52,30 @@ code {
 
 .footnote-icon:hover {
   color: #000;
+}
+
+.title-format {
+  background-image: linear-gradient(
+    180deg,
+    rgb(0, 0, 0) 0%,
+    rgb(165, 160, 160) 100%
+  );
+  color: transparent !important;
+  -webkit-background-clip: text;
+  display: inline;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
 }

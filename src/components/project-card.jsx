@@ -7,7 +7,7 @@ class ProjectCard extends Component {
     render() { 
         return(
         <div className="col-lg-4 d-flex align-items-stretch">
-          <div className="card bg-light border-dark my-3">
+          <div className="shadow card bg-light border-dark my-3">
           <img src={this.props.project.image} className="bd-placeholder-img card-img-top p-1" width="100%"></img>
 
           <div className="card-body">

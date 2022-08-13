@@ -11,10 +11,10 @@ class NavBarButton extends Component{
 
     render() { 
         return ( 
-           <Link to={this.props.menu.href} className="nav-link text-white">
+          <Link to={this.props.menu.href} className="nav-link text-white">
 
               <div className="px-5 nav-bar-button btn btn-outline-light btn-sm btn-block rounded-pill">
-                {this.props.menu.icon} {this.props.menu.name}
+              <strong>{this.props.menu.icon} {this.props.menu.name}</strong>
               </div>
             </Link>
             

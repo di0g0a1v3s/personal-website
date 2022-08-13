@@ -29,8 +29,13 @@ class App extends React.Component {
         
       ],
 
+      aboutAnimation: "assets/wave-hello.gif",
+
+      aboutPagePhrases: [{id:1, text: <>Welcome to my website 🖐. My name is Diogo and I'm a Software Engineer 💻. </>},
+                          {id:2, text: <>Welcome to my website 🖐. My name is Diogo and I'm a Software Engineer 💻. </>},],
+
       experience : [
-        {
+      {
           id:1, 
           logo:"assets/inov_logo.svg",
           location:"Lisbon, Portugal",
@@ -163,10 +168,9 @@ class App extends React.Component {
           <NavBar menus = {this.state.menus} title = {this.state.title}/>
         
           <Routes>
-            <Route path="/" element={<AboutPage/>}/>
+            <Route path="*" element={<AboutPage aboutAnimation={this.state.aboutAnimation}/>}/>
             <Route path="/experience" element={<ExperiencePage experience = {this.state.experience} education = {this.state.education}/>}/>
             <Route path="/projects" element={<ProjectsPage projects = {this.state.projects}/>}/>
-            <Route path="/contacts" element={<ContactsPage/>}/>
           </Routes>
           <Footer socialMedia = {this.state.socialMedia}/>
         </BrowserRouter>

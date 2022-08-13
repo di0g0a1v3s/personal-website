@@ -9,10 +9,10 @@ class ExperienceCard extends Component {
 
     <div className="position-relative me-4 my-5 pb-5">
         
-        <div id="circle-corner"></div>
+        <div className="shadow" id="circle-corner"></div>
         <img src={this.props.experience.logo} className="corner-image"/>
          
-        <div className="card bg-light border-dark">
+        <div className="shadow card bg-light border-dark">
           <div className="card-body">
             <h5 className="card-title">{this.props.experience.company}</h5>
             <h6 className="card-subtitle mb-2 text-muted">{this.props.experience.location}</h6>

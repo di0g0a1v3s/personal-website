@@ -33,7 +33,7 @@ class NavBar extends Component {
     </button>
     <div className="flex-wrap flex-column align-content-end navbar-collapse collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-lg-0">
-        {this.props.menus.map(menu => <li key={menu.id} className="nav-item active text-center"><NavBarButton key={menu.id} menu={menu}/></li>)}
+        {this.props.menus.map(menu => <li key={menu.id} data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" className="nav-item active text-center"><NavBarButton key={menu.id} menu={menu}/></li>)}
       </ul>
     </div>
   </div>
