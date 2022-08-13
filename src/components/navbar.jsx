@@ -1,18 +1,23 @@
 import * as React from 'react';
 import { Component } from 'react';
-import NavBarButton from './navbar-button.tsx'
-
+import NavBarButton from './navbar-button'
+import { Link } from "react-router-dom";
  
 class NavBar extends Component {
   
     render() { 
 
         return (
-<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
-    <a className="navbar-brand m-3" href="/">
-      <h4>{this.props.title}</h4>
-    </a>
+    <div className="navbar-brand p-2">
+      <Link to="/" className="nav-link text-white">
+        <svg className="m-2" height="30px" width="30px">
+          <use href="#site-logo"/>
+        </svg>
+        {this.props.title}
+      </Link>
+    </div>
     <button
       className="navbar-toggler"
       type="button"

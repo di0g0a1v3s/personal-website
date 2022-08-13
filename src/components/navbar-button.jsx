@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Component } from 'react';
+import { Link } from "react-router-dom";
 
 class NavBarButton extends Component{
 
@@ -10,12 +11,12 @@ class NavBarButton extends Component{
 
     render() { 
         return ( 
-        
-            <a href="/" className="nav-link text-white">
+           <Link to={this.props.menu.href} className="nav-link text-white">
+
               <div className="p-2 nav-bar-button">
                 {this.props.menu.icon} {this.props.menu.name}
               </div>
-            </a>
+            </Link>
             
             );
     }
