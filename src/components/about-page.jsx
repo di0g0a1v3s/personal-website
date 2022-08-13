@@ -10,7 +10,7 @@ class AboutPage extends Component {
 <div className="row">
     <div className='col-10 offset-1 col-sm-8 offset-sm-2 flex-wrap align-items-center'>
         <div className='col-6'>
-            <img className="img-fluid" src={this.props.aboutAnimation}></img>
+            <img className="img-fluid" src={this.props.aboutAnimation} alt="Welcome Animation"></img>
         </div>
     </div>
     <div className='col-10 offset-1 col-sm-8 offset-sm-2 flex-wrap align-items-center'>

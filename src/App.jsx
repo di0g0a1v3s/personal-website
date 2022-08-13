@@ -3,7 +3,6 @@ import NavBar from './components/navbar';
 import AboutPage from './components/about-page';
 import ExperiencePage from './components/experience-page';
 import ProjectsPage from './components/projects-page';
-import ContactsPage from './components/contacts-page';
 import Footer from './components/footer';
 import React from 'react';
 import {Route, Routes, BrowserRouter} from 'react-router-dom';
