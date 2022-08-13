@@ -13,7 +13,7 @@ class NavBarButton extends Component{
         return ( 
            <Link to={this.props.menu.href} className="nav-link text-white">
 
-              <div className="p-2 nav-bar-button">
+              <div className="px-5 nav-bar-button btn btn-outline-light btn-sm btn-block rounded-pill">
                 {this.props.menu.icon} {this.props.menu.name}
               </div>
             </Link>

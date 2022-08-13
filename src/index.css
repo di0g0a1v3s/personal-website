@@ -1,5 +1,5 @@
 body {
-  padding-top: 70px;
+  padding-top: 85px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -18,12 +18,8 @@ code {
   width: 100%;
 }
 
-.nav-bar-button:hover,
-.nav-bar-button:hover * {
-  height: 100%;
-  color: #000;
-  background-color: #fff;
-  border-color: #000;
+.nav-bar-button {
+  width: 100%;
 }
 
 .corner-image {
@@ -33,7 +29,7 @@ code {
   right: 0;
   top: 0;
   transform: translate(50%, -50%);
-  z-index: 100;
+  z-index: 1;
 }
 
 #circle-corner {
@@ -43,10 +39,18 @@ code {
   right: 0;
   top: 0;
   transform: translate(50%, -50%);
-  z-index: 100;
+  z-index: 1;
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
   border-radius: 60px;
   background: white;
   border: 1px solid black;
+}
+
+.footnote-icon {
+  font-size: 2rem;
+}
+
+.footnote-icon:hover {
+  color: #000;
 }

@@ -9,14 +9,14 @@ class ExperiencePage extends Component {
         return(
 
 <div className="row">
-    <div className='col-md-8 offset-md-2 p-3 flex-wrap align-items-center'>
-        <div className="mt-4 mb-3">
+    <div className='col-10 offset-1 col-sm-8 offset-sm-2 flex-wrap align-items-center'>
+        <div className="mt-4 pb-2">
             <h2>Professional Experience</h2>
         </div>
         {this.props.experience.map(exp => <ExperienceCard experience={exp}/>)}
     </div>
-    <div className='col-md-8 offset-md-2 p-3 flex-wrap align-items-center'>
-    <div className="mt-4 mb-3">
+    <div className='col-10 offset-1 col-sm-8 offset-sm-2 flex-wrap align-items-center'>
+    <div className="mt-4 pb-2">
             <h2>Education</h2>
         </div>
         {this.props.education.map(exp => <ExperienceCard experience={exp}/>)}

@@ -8,15 +8,18 @@ class NavBar extends Component {
     render() { 
 
         return (
-<nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+<nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark p-0">
   <div className="container-fluid">
-    <div className="navbar-brand p-2">
-      <Link to="/" className="nav-link text-white">
-        <svg className="m-2" height="30px" width="30px">
+    <div className="navbar-brand px-2 ">
+      
+      <Link to="/" className="nav-link text-white d-flex flex-wrap align-items-center">
+        <svg className="mx-2" height="30px" width="30px">
           <use href="#site-logo"/>
         </svg>
-        {this.props.title}
+        
+          <p className="fs-6 my-2">{this.props.title}</p>
       </Link>
+      
     </div>
     <button
       className="navbar-toggler"
@@ -28,9 +31,9 @@ class NavBar extends Component {
       aria-label="Toggle navigation">
       <span className="navbar-toggler-icon" />
     </button>
-    <div className="flex-wrap flex-column align-content-center navbar-collapse collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        {this.props.menus.map(menu => <li className="nav-item active text-center m-2"><NavBarButton key={menu.id} menu={menu}/></li>)}
+    <div className="flex-wrap flex-column align-content-end navbar-collapse collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-lg-0">
+        {this.props.menus.map(menu => <li key={menu.id} className="nav-item active text-center"><NavBarButton key={menu.id} menu={menu}/></li>)}
       </ul>
     </div>
   </div>

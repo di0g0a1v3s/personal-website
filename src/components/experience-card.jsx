@@ -7,7 +7,8 @@ class ExperienceCard extends Component {
     render() { 
         return(
 
-    <div className="position-relative mt-5 pb-5">  
+    <div className="position-relative me-4 my-5 pb-5">
+        
         <div id="circle-corner"></div>
         <img src={this.props.experience.logo} className="corner-image"/>
          

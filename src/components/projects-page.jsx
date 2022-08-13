@@ -8,14 +8,16 @@ class ProjectsPage extends Component {
     render() { 
         return(
 <div className="row">
-    <div className='col-md-8 offset-md-2 p-3 flex-wrap align-items-center'>
+    <div className='col-10 offset-1 col-sm-8 offset-sm-2 flex-wrap align-items-center'>
         <div className="mt-4 mb-3">
-            <h2>Side Projects</h2>
+            <h2>Projects</h2>
         </div>
         <div>
-            A collection of side projects...
+            Here you can find a collection of projects that I've developed, some as personal projects, others as part of my Academic path. 
         </div>
-        {this.props.projects.map(project => <ProjectCard project={project}/>)}
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        {this.props.projects.map(project =>  <ProjectCard key={project.id} project={project}/>)}
+        </div>
     </div>
 </div>
     );}
