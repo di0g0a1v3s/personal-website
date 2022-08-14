@@ -37,7 +37,7 @@ class NavBar extends Component {
 
         return (
 <nav className={(this.state.navBarShowing ? 'scrolled-up' : 'scrolled-down') + " navbar smart-scroll navbar-expand-lg navbar-dark bg-dark bg-gradient p-0"}>
-  <div className="container-fluid p-2">
+  <div className="container-fluid px-2">
     <div className="navbar-brand px-2 ">
       
       <Link to="/" className="nav-link text-white d-flex flex-wrap align-items-center">
@@ -45,12 +45,12 @@ class NavBar extends Component {
           <use href="#site-logo"/>
         </svg>
         
-          <p className="my-2">{this.props.title}</p>
+          <h4 className="my-2">{this.props.title}</h4>
       </Link>
       
     </div>
     <button
-      className="navbar-toggler"
+      className="navbar-toggler me-2"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent"

@@ -14,7 +14,7 @@ class App extends React.Component {
 
     this.state = 
     {
-      title : 'Diogo Alves',
+      title : <>DIOGO <br></br> ALVES</>,
       menus : [
         {id:1, selected:true, name:'About', href:"/", icon: <i className="bi bi-person-lines-fill"></i> }, 
         {id:2, selected:false, name:'Experience', href:"/experience", icon: <i className="bi bi-briefcase"></i>}, 
