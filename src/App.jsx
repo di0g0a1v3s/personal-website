@@ -31,7 +31,9 @@ class App extends React.Component {
       aboutAnimation: "assets/wave-hello.gif",
 
       aboutPagePhrases: [{id:1, text: <>Welcome to my website 🖐. My name is Diogo and I'm a Software Engineer 💻. </>},
-                          {id:2, text: <>Welcome to my website 🖐. My name is Diogo and I'm a Software Engineer 💻. </>},],
+                          {id:2, text: <>I studied Electrical and Computer Engineering at IST, and in my Master's Degree, I specialized in Computer Science 🎓.</>},
+                          {id:3, text: <>I currently live in Portugal and work as a Software Developer in the Area of Cyber Security 🔐.</>},
+                          {id:4, text: <>In my free time, I enjoy taking walks with my dog 🐕, biking 🚴, camping 🏕, and woodworking 🔨.</>},],
 
       experience : [
       {
@@ -167,7 +169,7 @@ class App extends React.Component {
           <NavBar menus = {this.state.menus} title = {this.state.title}/>
         
           <Routes>
-            <Route path="*" element={<AboutPage aboutAnimation={this.state.aboutAnimation}/>}/>
+            <Route path="*" element={<AboutPage aboutAnimation={this.state.aboutAnimation} aboutPagePhrases={this.state.aboutPagePhrases}/>}/>
             <Route path="/experience" element={<ExperiencePage experience = {this.state.experience} education = {this.state.education}/>}/>
             <Route path="/projects" element={<ProjectsPage projects = {this.state.projects}/>}/>
           </Routes>

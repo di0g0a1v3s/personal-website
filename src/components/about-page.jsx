@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Component } from 'react';
-import HobbyCard from './hobby-card';
 
  
 class AboutPage extends Component {
@@ -8,19 +7,15 @@ class AboutPage extends Component {
     render() { 
         return(
 <div className="row">
-    <div className='col-10 offset-1 col-sm-8 offset-sm-2 flex-wrap align-items-center'>
-        <div className='col-6'>
+    <div className='row col-10 offset-1 col-sm-8 offset-sm-2 flex-wrap align-items-center'>
+        <div className='col-12 col-md-6 align-self-start'>
             <img className="img-fluid" src={this.props.aboutAnimation} alt="Welcome Animation"></img>
         </div>
-    </div>
-    <div className='col-10 offset-1 col-sm-8 offset-sm-2 flex-wrap align-items-center'>
-        <div className="mt-4 mb-3">
-            <h1 className="title-format">Hobbies</h1>
-        </div>
-        <div>
-        <h3>Here is a gallery with activities that I enjoy doing in my free time.</h3>
-        </div>
-        <HobbyCard/>
+        <div className="shadow card bg-light bg-gradient border-dark col-12 col-md-6">
+            <div className="card-body p-0">
+                    {this.props.aboutPagePhrases.map(phrase => <div key={phrase.id}  className="shadow card bg-white border-dark my-3"><h4 key={phrase.id} className="p-2 ms-3 mb-1 rounded-3">{phrase.text}</h4></div>)}
+            </div>
+            </div>
     </div>
 </div>
 

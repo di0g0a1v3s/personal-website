@@ -4,20 +4,48 @@ import NavBarButton from './navbar-button'
 import { Link } from "react-router-dom";
  
 class NavBar extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {navBarShowing: true, last_scroll_top: 0}
+  }
+
+  componentDidMount()
+  {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount()
+  {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = (event) =>
+  {
+    let scroll_top = window.scrollY;
+    if(scroll_top < this.state.last_scroll_top) {
+      this.setState({navBarShowing: true})
+    }
+    else {
+      this.setState({navBarShowing: false})
+    }
+    this.setState({last_scroll_top : scroll_top});
+  }
   
-    render() { 
+  render() { 
 
         return (
-<nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark p-0">
-  <div className="container-fluid">
+<nav className={(this.state.navBarShowing ? 'scrolled-up' : 'scrolled-down') + " navbar smart-scroll navbar-expand-lg navbar-dark bg-dark bg-gradient p-0"}>
+  <div className="container-fluid p-2">
     <div className="navbar-brand px-2 ">
       
       <Link to="/" className="nav-link text-white d-flex flex-wrap align-items-center">
-        <svg className="mx-2" height="30px" width="30px">
+        <svg className="mx-4" height="50px" width="50px">
           <use href="#site-logo"/>
         </svg>
         
-          <p className="fs-6 my-2">{this.props.title}</p>
+          <p className="my-2">{this.props.title}</p>
       </Link>
       
     </div>

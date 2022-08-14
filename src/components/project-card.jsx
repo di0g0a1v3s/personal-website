@@ -11,7 +11,7 @@ class ProjectCard extends Component {
           <img src={this.props.project.image} className="bd-placeholder-img card-img-top p-1" alt="Project" width="100%"></img>
 
           <div className="card-body">
-            <h5 className="card-title">{this.props.project.title}</h5>
+            <h2 className="card-title">{this.props.project.title}</h2>
             <p className="card-text">{this.props.project.description}</p>
           </div>
 

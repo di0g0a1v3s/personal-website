@@ -13,12 +13,12 @@ class ExperienceCard extends Component {
         <img src={this.props.experience.logo} className="corner-image" alt="Company Logo"/>
          
         <div className="shadow card bg-light border-dark">
-          <div className="card-body">
-            <h5 className="card-title">{this.props.experience.company}</h5>
-            <h6 className="card-subtitle mb-2 text-muted">{this.props.experience.location}</h6>
-            <h5 className="card-title">{this.props.experience.job}</h5>
-            <p className="card-text">{this.props.experience.description}</p>
-            <p className="card-text badge text-bg-dark">{this.props.experience.date}</p>
+          <div className="card-body pe-5">
+            <h2 className="card-title">{this.props.experience.company}</h2>
+            <h3 className="card-subtitle mb-2 text-muted">{this.props.experience.location}</h3>
+            <h2 className="card-title">{this.props.experience.job}</h2>
+            <span className="card-text">{this.props.experience.description}</span>
+            <span className="card-text badge text-bg-dark">{this.props.experience.date}</span>
             
           </div>
         </div>

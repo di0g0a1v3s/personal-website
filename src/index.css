@@ -1,7 +1,7 @@
 body {
   padding-top: 85px;
   margin: 0;
-  font-family: Consolas, Inter, sans-serif;
+  font-family: Consolas, Trebuchet MS, Inter, sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -57,12 +57,12 @@ code {
 .title-format {
   background-image: linear-gradient(
     180deg,
-    rgb(0, 0, 0) 0%,
-    rgb(165, 160, 160) 100%
+    rgb(141, 137, 137) 0%,
+    rgb(0, 0, 0) 100%
   );
   color: transparent !important;
   -webkit-background-clip: text;
-  display: inline;
+  background-clip: text;
 }
 
 .h1,
@@ -78,4 +78,31 @@ h4,
 h5,
 h6 {
   font-weight: bold;
+}
+
+p,
+a,
+span,
+span b,
+button,
+.btn,
+.badge,
+strong {
+  font-size: 19px;
+}
+
+.smart-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
 }
