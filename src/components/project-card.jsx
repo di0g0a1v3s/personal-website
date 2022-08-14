@@ -6,9 +6,9 @@ class ProjectCard extends Component {
   
     render() { 
         return(
-        <div className="col-lg-4 d-flex align-items-stretch">
+        <div className="animation-fade-in  col-lg-4 d-flex align-items-stretch">
           <div className="shadow card bg-light border-dark my-3">
-          <img src={this.props.project.image} className="bd-placeholder-img card-img-top p-1" alt="Project" width="100%"></img>
+          <img src={this.props.project.image} loading="lazy" className=" bd-placeholder-img card-img-top p-1" alt="Project" width="100%"></img>
 
           <div className="card-body">
             <h2 className="card-title">{this.props.project.title}</h2>

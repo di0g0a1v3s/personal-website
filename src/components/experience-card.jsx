@@ -7,7 +7,7 @@ class ExperienceCard extends Component {
     render() { 
         return(
 
-    <div className="position-relative me-4 my-5 pb-5">
+    <div className={(this.props.experience.id % 2 === 0 ? 'animation-move-from-left' : 'animation-move-from-right') + " position-relative me-4 my-5 pb-5"}>
         
         <div className="shadow" id="circle-corner"></div>
         <img src={this.props.experience.logo} className="corner-image" alt="Company Logo"/>
