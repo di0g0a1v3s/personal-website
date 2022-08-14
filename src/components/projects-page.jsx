@@ -4,7 +4,15 @@ import ProjectCard from './project-card';
 
  
 class ProjectsPage extends Component {
-  
+    constructor(props) {
+        super(props);
+    
+      }
+
+    componentDidMount()
+    {
+        this.props.onPageChange(this.props.menu);
+    }
     render() { 
         return(
 <div className="row">

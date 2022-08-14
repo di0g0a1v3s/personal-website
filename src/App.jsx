@@ -16,9 +16,9 @@ class App extends React.Component {
     {
       title : 'Diogo Alves',
       menus : [
-        {id:1, name:'About', href:"/", icon: <i className="bi bi-person-lines-fill"></i> }, 
-        {id:2, name:'Experience', href:"/experience", icon: <i className="bi bi-briefcase"></i>}, 
-        {id:3, name:'Projects', href:"/projects", icon: <i className="bi bi-code-slash"></i> }, 
+        {id:1, selected:true, name:'About', href:"/", icon: <i className="bi bi-person-lines-fill"></i> }, 
+        {id:2, selected:false, name:'Experience', href:"/experience", icon: <i className="bi bi-briefcase"></i>}, 
+        {id:3, selected:false, name:'Projects', href:"/projects", icon: <i className="bi bi-code-slash"></i> }, 
       ],
 
       socialMedia: [
@@ -169,14 +169,20 @@ class App extends React.Component {
           <NavBar menus = {this.state.menus} title = {this.state.title}/>
         
           <Routes>
-            <Route path="*" element={<AboutPage aboutAnimation={this.state.aboutAnimation} aboutPagePhrases={this.state.aboutPagePhrases}/>}/>
-            <Route path="/experience" element={<ExperiencePage experience = {this.state.experience} education = {this.state.education}/>}/>
-            <Route path="/projects" element={<ProjectsPage projects = {this.state.projects}/>}/>
+            <Route path="*" element={<AboutPage menu={this.state.menus[0]} onPageChange={this.handlePageChange} aboutAnimation={this.state.aboutAnimation} aboutPagePhrases={this.state.aboutPagePhrases}/>}/>
+            <Route path="/experience" element={<ExperiencePage menu={this.state.menus[1]} onPageChange={this.handlePageChange} experience = {this.state.experience} education = {this.state.education}/>}/>
+            <Route path="/projects" element={<ProjectsPage menu={this.state.menus[2]} onPageChange={this.handlePageChange} projects = {this.state.projects}/>}/>
           </Routes>
           <Footer socialMedia = {this.state.socialMedia}/>
         </BrowserRouter>
       </React.Fragment>
     );
+  }
+
+  handlePageChange = (menu) =>
+  {
+    let newMenuState = this.state.menus.map(m => menu.id === m.id ? {id:m.id, selected:true, name:m.name, href:m.href, icon: m.icon} : {id:m.id, selected:false, name:m.name, href:m.href, icon: m.icon})
+    this.setState({menus: newMenuState});
   }
 
 }
