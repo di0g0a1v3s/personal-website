@@ -4,10 +4,7 @@ import ProjectCard from './project-card';
 
  
 class ProjectsPage extends Component {
-    constructor(props) {
-        super(props);
-    
-      }
+   
 
     componentDidMount()
     {

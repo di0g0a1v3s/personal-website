@@ -4,10 +4,7 @@ import { Component } from 'react';
  
 class AboutPage extends Component {
 
-    constructor(props) {
-        super(props);
-    
-      }
+
 
     componentDidMount()
     {

@@ -4,11 +4,7 @@ import ExperienceCard from './experience-card';
 
  
 class ExperiencePage extends Component {
-    constructor(props) {
-        super(props);
-    
-      }
-
+   
     componentDidMount()
     {
         this.props.onPageChange(this.props.menu);
