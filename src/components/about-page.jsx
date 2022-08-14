@@ -6,7 +6,7 @@ class AboutPage extends Component {
   
     render() { 
         return(
-<div className="row m-5">
+<div className="row mx-1 my-5">
     <div className='row col-10 offset-1 col-sm-8 offset-sm-2 flex-wrap align-items-center'>
         <div className='col-12 col-md-6 align-self-start'>
             <img className="img-fluid" src={this.props.aboutAnimation} alt="Welcome Animation"></img>
