@@ -1,3 +1,7 @@
+# Personal Website
+
+## Go to https://diogomartinsalves.com/ to see the website live
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
