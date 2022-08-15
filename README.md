@@ -1,6 +1,33 @@
 # Personal Website
 
-## Go to https://diogomartinsalves.com/ to see the website live
+#### Go to https://diogomartinsalves.com/ to see the website live
+
+![image](https://user-images.githubusercontent.com/60743836/184664016-441011ea-6fa3-4e00-9c96-3a11f3546cb0.png)
+
+# Firebase
+
+This project is hosted on Firebase. Everytime there is a change on the master branch, Github Actions will automatically trigger a re-deploy.
+
+# Technologies Used
+
+<ul>
+<li> React </li>
+<li> JavaScript </li>
+<li> Bootstrap </li>
+</ul>
+
+The website is also available as a Progressive Web App (PWA).
+
+# Alternate Links
+<ul>
+<li> https://personal-website-b792e.web.app/ </li>
+<li> https://personal-website-b792e.firebaseapp.com/ </li>
+<li> https://diogomartinsalves.com/ </li>
+<li> https://www.diogomartinsalves.com/ </li>
+<li> diogomartinsalves.onthewifi.com </li>
+</ul>
+
+
 
 # Getting Started with Create React App
 
